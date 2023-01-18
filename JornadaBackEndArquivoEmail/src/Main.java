@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Main {
 
@@ -7,21 +8,21 @@ public class Main {
         CaixaEntrada ce = new CaixaEntrada();
         Email email1 = new Email();
         email1.setEnd_remetente("manovoutomarbanho@gmail.com");
-        email1.setAssunto("Mandem pix");
+        email1.setAssunto("Mandem boladão");
         email1.setData_envio(LocalDate.of(2022,10,10));
         email1.setData_recebimento(LocalDate.of(2022,10,10));
         email1.setTexto("Bla bla");
 
         Email email2 = new Email();
         email2.setEnd_remetente("manovoutomarbanho@gmail.com");
-        email2.setAssunto("Mandem pix");
+        email2.setAssunto("Mandem demandas");
         email2.setData_envio(LocalDate.of(2023,01,18));
         email2.setData_recebimento(email2.getData_envio());
         email2.setTexto("Bla bla");
 
         Email email3 = new Email();
         email3.setEnd_remetente("cotato@patatipatata.com");
-        email3.setAssunto("Mandem pix");
+        email3.setAssunto("Mandem Nudes");
         email3.setData_envio(LocalDate.of(2022,06,10));
         email3.setData_recebimento(LocalDate.of(2022,06,10));
         email3.setTexto("Bla bla");
@@ -46,6 +47,13 @@ public class Main {
         ce.listarRemetentesDeHoje();
         ce.removerEmailsAntigosPorContato(LocalDate.of(2022,12,31), "cotato@patatipatata.com");
         ce.totalEmailsPorRemetente("cotato@patatipatata.com");
+
+        ArrayList<String> listaBusca = new ArrayList();
+        listaBusca.add("Nudes");
+        listaBusca.add("Pix");
+        listaBusca.add("Demandas");
+
+        ce.buscarEmailPorPalavraChave(listaBusca);
 
     }
 

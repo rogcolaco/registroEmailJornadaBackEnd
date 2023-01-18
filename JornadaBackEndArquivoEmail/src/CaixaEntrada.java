@@ -1,4 +1,6 @@
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class CaixaEntrada {
 
@@ -34,6 +36,10 @@ public class CaixaEntrada {
 
     public void removerEmailsAntigosPorContato(LocalDate localDate, String remetente){
         caixaEntrada.removerPorDataERemetente(localDate, remetente);
+    }
+
+    public void buscarEmailPorPalavraChave(ArrayList<String> listaDePalavras){
+        System.out.println(caixaEntrada.buscarPorBlockList(listaDePalavras));
     }
 
 }

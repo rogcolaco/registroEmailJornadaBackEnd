@@ -82,4 +82,20 @@ public class MailMap {
         if (emails.size() <= 0) mapMail.remove(remetente);
 
     }
+
+    public Set<String> buscarPorBlockList(ArrayList<String> listaDePalavras) {
+        Set<String> emailsSuspeitos = new HashSet<>();
+
+        mapMail.forEach((key, value) -> {
+            value.forEach(element -> {
+                listaDePalavras.forEach(listaBusca -> {
+                    if ((element.getAssunto().toUpperCase()).contains(listaBusca.toUpperCase())) {
+                        emailsSuspeitos.add(element.getEnd_remetente());
+                    }
+                });
+            });
+        });
+
+        return  emailsSuspeitos;
+    }
 }
