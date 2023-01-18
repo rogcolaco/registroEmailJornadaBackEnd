@@ -32,4 +32,8 @@ public class CaixaEntrada {
         System.out.println(caixaEntrada.getRemetentesDiario());
     }
 
+    public void removerEmailsAntigosPorContato(LocalDate localDate, String remetente){
+        caixaEntrada.removerPorDataERemetente(localDate, remetente);
+    }
+
 }

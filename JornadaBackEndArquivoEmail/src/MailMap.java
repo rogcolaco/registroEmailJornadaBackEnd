@@ -68,4 +68,18 @@ public class MailMap {
         });
         return remetentesDiario;
     }
+
+    public void removerPorDataERemetente(LocalDate localDate, String remetente) {
+
+        LinkedList<Email> emails = mapMail.get(remetente);
+
+        emails.forEach(element -> {
+            if (element.getData_recebimento().isBefore(localDate)){
+                emails.remove(element);
+            }
+        });
+
+        if (emails.size() <= 0) mapMail.remove(remetente);
+
+    }
 }

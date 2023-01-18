@@ -15,8 +15,8 @@ public class Main {
         Email email2 = new Email();
         email2.setEnd_remetente("manovoutomarbanho@gmail.com");
         email2.setAssunto("Mandem pix");
-        email2.setData_envio(LocalDate.of(2023,01,16));
-        email2.setData_recebimento(LocalDate.of(2023,01,16));
+        email2.setData_envio(LocalDate.of(2023,01,18));
+        email2.setData_recebimento(email2.getData_envio());
         email2.setTexto("Bla bla");
 
         Email email3 = new Email();
@@ -26,16 +26,26 @@ public class Main {
         email3.setData_recebimento(LocalDate.of(2022,06,10));
         email3.setTexto("Bla bla");
 
+        Email email4 = new Email();
+        email4.setEnd_remetente("cotato@patatipatata.com");
+        email4.setAssunto("Mandem pix");
+        email4.setData_envio(LocalDate.of(2023,01,18));
+        email4.setData_recebimento(email4.getData_envio());
+        email4.setTexto("Bla bla");
+
         ce.adicionarEmail(email1);
         ce.adicionarEmail(email2);
         ce.adicionarEmail(email3);
+        ce.adicionarEmail(email4);
         ce.totalCatalogoEndereco();
         ce.totalEmailsPorRemetente("cotato@patatipatata.com");
-        ce.removerEmailsAntigos(LocalDate.of(2022,07,10));
+//        ce.removerEmailsAntigos(LocalDate.of(2022,07,10));
         ce.totalCatalogoEndereco();
         ce.totalEmailsPorRemetente("manovoutomarbanho@gmail.com");
 //        ce.totalEmailsPorRemetente("cotato@patatipatata.com");
         ce.listarRemetentesDeHoje();
+        ce.removerEmailsAntigosPorContato(LocalDate.of(2022,12,31), "cotato@patatipatata.com");
+        ce.totalEmailsPorRemetente("cotato@patatipatata.com");
 
     }
 
