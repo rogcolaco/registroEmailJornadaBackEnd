@@ -45,7 +45,7 @@ public class Main {
         ce.totalEmailsPorRemetente("manovoutomarbanho@gmail.com");
 //        ce.totalEmailsPorRemetente("cotato@patatipatata.com");
         ce.listarRemetentesDeHoje();
-        ce.removerEmailsAntigosPorContato(LocalDate.of(2022,12,31), "cotato@patatipatata.com");
+//        ce.removerEmailsAntigosPorContato(LocalDate.of(2022,12,31), "cotato@patatipatata.com");
         ce.totalEmailsPorRemetente("cotato@patatipatata.com");
 
         ArrayList<String> listaBusca = new ArrayList();
@@ -53,6 +53,7 @@ public class Main {
         listaBusca.add("Pix");
         listaBusca.add("Demandas");
 
+        ce.buscarRementeEmailPorPalavraChave(listaBusca);
         ce.buscarEmailPorPalavraChave(listaBusca);
 
     }

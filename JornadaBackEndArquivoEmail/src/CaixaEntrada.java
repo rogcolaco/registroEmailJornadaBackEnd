@@ -1,6 +1,5 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.LinkedList;
 
 public class CaixaEntrada {
 
@@ -38,8 +37,12 @@ public class CaixaEntrada {
         caixaEntrada.removerPorDataERemetente(localDate, remetente);
     }
 
-    public void buscarEmailPorPalavraChave(ArrayList<String> listaDePalavras){
+    public void buscarRementeEmailPorPalavraChave(ArrayList<String> listaDePalavras){
         System.out.println(caixaEntrada.buscarPorBlockList(listaDePalavras));
+    }
+
+    public void buscarEmailPorPalavraChave(ArrayList<String> listaDePalavras){
+        System.out.println(caixaEntrada.buscarEmailBlockList(listaDePalavras));
     }
 
 }

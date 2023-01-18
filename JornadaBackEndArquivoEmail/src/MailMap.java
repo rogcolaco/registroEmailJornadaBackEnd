@@ -98,4 +98,25 @@ public class MailMap {
 
         return  emailsSuspeitos;
     }
+
+    public ArrayList<Email> buscarEmailBlockList(ArrayList<String> listaDePalavras) {
+
+        ArrayList<Email> emailsSuspeitos = new ArrayList<>();
+
+        mapMail.forEach((key, value) -> {
+            value.forEach(element -> {
+                listaDePalavras.forEach(listaBusca -> {
+                    if ((element.getAssunto().toUpperCase()).contains(listaBusca.toUpperCase())) {
+                        emailsSuspeitos.add(element);
+                    }
+                });
+            });
+        });
+
+        return  emailsSuspeitos;
+
+    }
+
+
+
 }
