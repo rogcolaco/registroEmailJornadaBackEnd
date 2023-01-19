@@ -129,4 +129,14 @@ public class MailMap {
         });
 
     }
+
+    public ArrayList<String> getPorPais(String siglaPais) {
+        ArrayList<String> listaEmailPorPais = new ArrayList<>();
+
+        mapMail.forEach((key, value) -> {
+            if(key.endsWith(siglaPais.toLowerCase())) listaEmailPorPais.add(key);
+        });
+
+        return listaEmailPorPais;
+    }
 }

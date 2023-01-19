@@ -49,4 +49,8 @@ public class CaixaEntrada {
         caixaEntrada.removerEmailBlockList(listaDePalavras);
     }
 
+    public void mostrarEmailPorPaís(String siglaPais){
+        System.out.println(caixaEntrada.getPorPais(siglaPais));
+    }
+
 }

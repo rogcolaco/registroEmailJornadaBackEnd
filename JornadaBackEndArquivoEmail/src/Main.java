@@ -14,14 +14,14 @@ public class Main {
         email1.setTexto("Bla bla");
 
         Email email2 = new Email();
-        email2.setEnd_remetente("manovoutomarbanho@gmail.com");
+        email2.setEnd_remetente("manovoutomarbanho@gmail.com.jp");
         email2.setAssunto("Mandem demandas");
         email2.setData_envio(LocalDate.of(2023,01,18));
         email2.setData_recebimento(email2.getData_envio());
         email2.setTexto("Bla bla");
 
         Email email3 = new Email();
-        email3.setEnd_remetente("cotato@patatipatata.com");
+        email3.setEnd_remetente("cotato@patatipatata.com.br");
         email3.setAssunto("Mandem Nudes");
         email3.setData_envio(LocalDate.of(2022,06,10));
         email3.setData_recebimento(LocalDate.of(2022,06,10));
@@ -60,6 +60,8 @@ public class Main {
 
         ce.totalEmailsPorRemetente("cotato@patatipatata.com");
         ce.totalEmailsPorRemetente("manovoutomarbanho@gmail.com");
+
+        ce.mostrarEmailPorPaís("jp");
 
     }
 
