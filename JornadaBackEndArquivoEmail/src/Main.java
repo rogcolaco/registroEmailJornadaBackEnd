@@ -56,6 +56,11 @@ public class Main {
         ce.buscarRementeEmailPorPalavraChave(listaBusca);
         ce.buscarEmailPorPalavraChave(listaBusca);
 
+        ce.removerEmailPorPalavraChave(listaBusca);
+
+        ce.totalEmailsPorRemetente("cotato@patatipatata.com");
+        ce.totalEmailsPorRemetente("manovoutomarbanho@gmail.com");
+
     }
 
 }

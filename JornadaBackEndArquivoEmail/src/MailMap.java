@@ -118,5 +118,15 @@ public class MailMap {
     }
 
 
+    public void removerEmailBlockList(ArrayList<String> listaDePalavras) {
 
+        LinkedHashMap<String, ArrayList<Email>> contatosSuspeitos = new LinkedHashMap<>();
+
+        ArrayList<Email> emailSuspeitos = this.buscarEmailBlockList(listaDePalavras);
+
+        emailSuspeitos.forEach(element -> {
+            mapMail.get(element.getEnd_remetente()).remove(element);
+        });
+
+    }
 }

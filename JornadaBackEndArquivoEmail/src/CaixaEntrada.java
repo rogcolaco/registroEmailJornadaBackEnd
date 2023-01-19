@@ -45,4 +45,8 @@ public class CaixaEntrada {
         System.out.println(caixaEntrada.buscarEmailBlockList(listaDePalavras));
     }
 
+    public void removerEmailPorPalavraChave(ArrayList<String> listaDePalavras){
+        caixaEntrada.removerEmailBlockList(listaDePalavras);
+    }
+
 }
